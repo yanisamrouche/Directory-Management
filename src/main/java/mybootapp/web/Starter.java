@@ -12,11 +12,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import mybootapp.repo.CourseRepository;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackageClasses = CourseRepository.class)
-@EntityScan(basePackageClasses = Course.class)
+@EnableJpaRepositories(basePackageClasses = Starter.class)
+@EntityScan(basePackageClasses = Starter.class)
 public class Starter extends SpringBootServletInitializer implements WebMvcConfigurer {
 
 	@Override
