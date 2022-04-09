@@ -35,10 +35,6 @@ public class DirectoryManager implements IDirectoryManager{
     public JavaMailSender sender;
 
 
-
-
-
-
     @Override
     public User newUser() {
         User user = new User();
@@ -174,7 +170,6 @@ public class DirectoryManager implements IDirectoryManager{
         System.err.println("[MANAGER] change password to p:"+password);
         p.setPassword(password);
         dao.updatePerson(p);
-
         return true;
     }
 
