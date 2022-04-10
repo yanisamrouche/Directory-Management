@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.Date;
 import io.jsonwebtoken.Jwts;
 
-
+import javax.mail.internet.MimeMessage;
 import javax.crypto.spec.SecretKeySpec;
 import javax.xml.bind.DatatypeConverter;
 
