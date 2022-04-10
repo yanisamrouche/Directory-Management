@@ -1,0 +1,47 @@
+nav {
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-bar .nav-title {
+    background: linear-gradient(to right, purple, #1c1c1e );
+    padding: 20px;
+    height: 15px;
+    border-radius: 50px;
+}
+.nav-bar .nav-search{
+    background-color: #1c1c1e;
+    height: 45px ;
+    flex:1;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+}
+.nav-bar .nav-search .searchInput{
+    background-color: transparent;
+    border: transparent;
+    width: 50%;
+    outline: transparent;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+.nav-bar .nav-search .btnSearchInput{
+    margin: 5px;
+    border-radius: 50px;
+}
+
+
+.nav-bar .nav-log{
+    background: linear-gradient(to right, purple, #1c1c1e );
+    padding: 20px;
+    height: 15px;
+    border-radius: 50px;
+    color: black;
+}
+
+nav a{
+    color: white;
+}
