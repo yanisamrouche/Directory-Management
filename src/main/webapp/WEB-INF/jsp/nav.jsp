@@ -22,7 +22,7 @@
 
 
     <div class="nav-search" >
-        <form action="${search }" id="searchForm" >
+        <form action="${search}" id="searchForm" >
             <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
             <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search">
         </form>

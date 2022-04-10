@@ -5,6 +5,8 @@
 
 <c:url var="index" value="/index.css" />
 <c:url var="nav" value="/nav.css" />
+<c:url var="personPage" value="/personPage.css" />
+<c:url var="personsListPage" value="/personsListPage.css" />
 
 
 <html>
@@ -13,8 +15,12 @@
 		<title>Annuaire</title>
 		<link rel="stylesheet" href="${index}">
 		<link rel="stylesheet" href="${nav}">
+		<link rel="stylesheet" href="${personPage}">
+		<link rel="stylesheet" href="${personsListPage}">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 		</head>
 <body>

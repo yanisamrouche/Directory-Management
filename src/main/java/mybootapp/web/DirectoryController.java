@@ -54,7 +54,7 @@ public class DirectoryController {
         if(id.isPresent()) {
             Person person = manager.findPerson(user, id.get());
             System.err.println("[CONTROLER] profile infos b:"+person.getBirthdate()+" e:"+person.getEmail());
-            return new ModelAndView("profile/profile", "person", person);
+            return new ModelAndView("person/person", "person", person);
         } else {
             int part = 0;
             int pageSize = 10;
@@ -70,28 +70,28 @@ public class DirectoryController {
             int firstIndex = part*pageSize;
             int lastIndex = part*pageSize+pageSize > persons.size() ? persons.size() : part*pageSize+pageSize;
 
-            return new ModelAndView("profile/profileList", "persons", persons.subList(firstIndex, lastIndex));
+            return new ModelAndView("person/personsList", "persons", persons.subList(firstIndex, lastIndex));
         }
     }
 
-    @RequestMapping("profiles/find")
+    @RequestMapping("person/find")
     public ModelAndView showProfilesFind(HttpSession session, @RequestParam("name")String name) {
         User user = getUser(session);
         final var result = manager.findPersonsByName(user, name);
-        return new ModelAndView("profile/profileSearch", "persons", result);
+        return new ModelAndView("person/personSearch", "persons", result);
     }
 
-    @RequestMapping(value = "profiles/edit", method = RequestMethod.GET)
+    @RequestMapping(value = "person/edit", method = RequestMethod.GET)
     public ModelAndView editProfile(HttpSession session, @RequestParam int id) {
         User user = getUser(session);
 
         if(!user.getIsLogged()) return new ModelAndView("index");
         if(user.getPerson() == null) return new ModelAndView("index");
 
-        return new ModelAndView("profile/profileEdit", "person", user.getPerson());
+        return new ModelAndView("person/personEdit", "person", user.getPerson());
     }
 
-    @RequestMapping(value = "profiles/edit", method = RequestMethod.POST)
+    @RequestMapping(value = "person/edit", method = RequestMethod.POST)
     public String saveProfile(HttpSession session, @ModelAttribute @Valid Person p, BindingResult result) {
         User user = getUser(session);
 
@@ -101,7 +101,7 @@ public class DirectoryController {
         validator.validate(p, result);
         if (result.hasErrors()) {
             System.err.println("[CONTROLER] profile edit errors");
-            return "profile/profileEdit";
+            return "person/personEdit";
         }
 
         Group g = manager.findGroup(user, p.getCurrentGroup().getId());
@@ -114,7 +114,7 @@ public class DirectoryController {
         user.setPerson(p);
         session.setAttribute("user", user);
 
-        return "profile/profile";
+        return "person/person";
     }
 
     @RequestMapping("groups")

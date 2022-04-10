@@ -1,0 +1,29 @@
+.personCard{
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    padding-bottom: 20px ;
+    justify-content: center;
+    align-content: center;
+}
+
+.card{
+
+    color: white;
+    background: linear-gradient(to bottom, purple, #1c1c1e );
+    border-radius: 20px;
+    width: 400px;
+    height: 250px;
+    margin-right: 30px;
+    justify-content: center;
+    align-content: center;
+}
+.card p{
+    text-align: center;
+}
+.card .userIcon{
+    color: white;
+    font-size: 50px;
+    display: table;
+    margin: 0 auto;
+}

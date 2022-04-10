@@ -1,8 +1,8 @@
 <%@ include file="/WEB-INF/jsp/header.jsp"%>
 
-<c:url var="profiles" value="/profiles" />
+<c:url var="persons" value="/profiles" />
 <c:url var="groups" value="/groups" />
-<c:url var="search" value="/profiles/find" />
+<c:url var="search" value="/person/find" />
 
 
 	<div>
@@ -10,7 +10,7 @@
 	</div>
 	<div class="main">
 		<div class="personnes">
-			<a  href="${profiles}">
+			<a  href="${persons}">
 				<span class="prs"><i class="fas fa-users"></i></span>
 				<span class="prs">Personnes</span>
 			</a>
