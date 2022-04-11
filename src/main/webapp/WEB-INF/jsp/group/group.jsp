@@ -7,26 +7,25 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-
-
-
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
 <c:url var="view" value="/profiles" />
 
 <html>
 <head>
-    <%--%@ include file="/WEB-INF/jsp/header.jsp"%--%>
+    <%@ include file="/WEB-INF/jsp/header.jsp"%>
     <title>GroupList :: ${group.getName()}</title>
 </head>
 <body>
-<section>
     <div>
-        <%--%@ include file="/WEB-INF/jsp/nav.jsp"%--%>
+<%--        <%@ include file="/WEB-INF/jsp/nav.jsp"%>--%>
     </div>
     <div >
-        <div class="container">
-            <div class="card">
-                <div class="card-content">
+        <div>
+            <div>
+                <div>
                     <p class="title"><c:out value="${group.getName()}" /></p>
                     <hr>
                     <p class="subtitle">Adhérents</p>
@@ -39,6 +38,5 @@
             </div>
         </div>
     </div>
-</section>
 </body>
 </html>

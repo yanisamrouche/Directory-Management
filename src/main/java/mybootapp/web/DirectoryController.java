@@ -149,6 +149,36 @@ public class DirectoryController {
         return new ModelAndView("group/groupSearch", "groupList", result);
     }
 
+    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    public ModelAndView login(HttpSession session) {
+        return new ModelAndView("log/login");
+    }
+
+    @RequestMapping(value = "/log", method = RequestMethod.POST)
+    public ModelAndView doLogin(HttpSession session, @RequestParam("email")String email, @RequestParam("password")String password) {
+        User user = getUser(session);
+
+        System.err.println("[CONTROLER] login e:"+email+" p:"+password);
+
+        if(manager.login(user, email, password)) {
+            session.setAttribute("user", user);
+            user.setConnectionError(false);
+            return new ModelAndView("profile/profile", "person", user.getPerson());
+        }
+        else {
+            user.setConnectionError(true);
+            return new ModelAndView("log/login");
+        }
+    }
+
+    @RequestMapping("/out")
+    public ModelAndView logout(HttpSession session) {
+        User user = getUser(session);
+        manager.logout(user);
+        session.setAttribute("user", user);
+        return new ModelAndView("log/login");
+    }
+
     private User getUser(HttpSession session) {
         User user;
         if(session.getAttribute("user") == null) {
@@ -162,5 +192,7 @@ public class DirectoryController {
         }
         return user;
     }
+
+
 
 }

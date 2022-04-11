@@ -17,7 +17,6 @@
 <html>
 <head>
     <%@ include file="/WEB-INF/jsp/header.jsp"%>
-
     <title>Les personnes</title>
 
 </head>

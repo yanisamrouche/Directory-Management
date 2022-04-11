@@ -7,12 +7,15 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+
 <%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
 <c:url var="view" value="/groups" />
-<!DOCTYPE html>
+<c:url var="home" value="/" />
 
-
+<c:url var="login" value="/log" />
 
 <%--c:url var="findGroups" value="/groups/find" /--%>
 
@@ -22,12 +25,49 @@
   <title>Liste des groupes</title>
 </head>
 <body>
-  <div class="hero-head">
-    <%--%@ include file="/WEB-INF/jsp/nav.jsp"%--%>
-  </div class="hero-head">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title is-1">Groupes:</h1>
+  <div>
+<%--    <%@ include file="/WEB-INF/jsp/nav.jsp"%>--%>
+  <nav class="nav-bar">
+    <div class="nav-title">
+      <a  href="${home }">
+        AMU-Annuaire
+      </a>
+    </div>
+
+
+    <div class="nav-search" >
+      <form action="${search}" id="searchForm" >
+        <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
+        <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search">
+      </form>
+    </div>
+
+    <div class="nav-log">
+
+      <c:choose>
+        <c:when test="${sessionScope.user.getPerson() == null}">
+          <a class="button is-light" href="${login}">
+            <span>Connexion</span>
+          </a>
+        </c:when>
+        <c:otherwise>
+          <a href="${profiles}?id=${sessionScope.user.getPerson().getId()}">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span>Mon profil</span>
+          </a>
+          <a href="${login}/out">
+            <span>Deconnexion</span>
+          </a>
+        </c:otherwise>
+      </c:choose>
+    </div>
+  </div>
+  </nav>
+
+  </div>
+  <div >
+    <div>
+      <h1>Groupes:</h1>
 
       <table style="border: 1px solid;">
         <tr style="border: 1px solid;">
