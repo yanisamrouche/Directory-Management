@@ -29,15 +29,18 @@
     <div class="container">
       <h1 class="title is-1">Groupes:</h1>
 
-      <c:forEach items="${groupList}" var="group">
-        <div class="card">
-          <a href="${view}?id=${group.getId()}">
-            <div class="card-content">
-              <p class="title is-5"><c:out value="${group.getName()}" /></p>
-            </div>
-          </a>
-        </div>
-      </c:forEach>
+      <table style="border: 1px solid;">
+        <tr style="border: 1px solid;">
+          <th>Nom</th> <th> Lien </th>
+        </tr>
+        <c:forEach items="${groupList}" var="group">
+
+          <tr>
+            <td> <c:out value="${group.getName()}" /> </td>
+            <td> <a href="${view}?id=${group.getId()}"> <i class="fas fa-eye"></i> </a></td>
+          </tr>
+        </c:forEach>
+      </table>
 
       <hr>
       <nav class="pagination is-centered" role="navigation" aria-label="pagination">

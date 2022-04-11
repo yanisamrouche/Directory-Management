@@ -15,13 +15,13 @@
 
 <html>
 <head>
-    <%@ include file="/WEB-INF/jsp/header.jsp"%>
+    <%--%@ include file="/WEB-INF/jsp/header.jsp"%--%>
     <title>GroupList :: ${group.getName()}</title>
 </head>
 <body>
 <section>
     <div>
-        <%@ include file="/WEB-INF/jsp/nav.jsp"%>
+        <%--%@ include file="/WEB-INF/jsp/nav.jsp"%--%>
     </div>
     <div >
         <div class="container">
