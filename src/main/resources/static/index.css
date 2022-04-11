@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right, #59f9b7, #66feea );
+    background: linear-gradient(to right,#050A30,#007575 );
     padding: 20px;
     min-height: 100vh;
     max-width: 100vw;
@@ -18,7 +18,7 @@ a{
 
 .main .personnes{
     color: white;
-    background: linear-gradient(to bottom, purple, #1c1c1e );
+    background: linear-gradient(to bottom,#00A3A3, #1c1c1e );
     border-radius: 20px;
     width: 400px;
     height: 250px;
@@ -32,7 +32,7 @@ a{
 }
 .main .groupes{
     color: white;
-    background: linear-gradient(to bottom, purple, #1c1c1e );
+    background: linear-gradient(to bottom, #00A3A3, #1c1c1e );
     border-radius: 20px;
     width: 400px;
     height: 250px;

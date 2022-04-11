@@ -7,6 +7,8 @@
 <c:url var="nav" value="/nav.css" />
 <c:url var="personPage" value="/personPage.css" />
 <c:url var="personsListPage" value="/personsListPage.css" />
+<c:url var="groupListPage" value="/groupListPage.css" />
+
 
 
 <html>
@@ -17,6 +19,9 @@
 		<link rel="stylesheet" href="${nav}">
 		<link rel="stylesheet" href="${personPage}">
 		<link rel="stylesheet" href="${personsListPage}">
+			<link rel="stylesheet" href="${groupListPage}">
+
+
 
 
 

@@ -6,7 +6,7 @@ nav {
     align-items: center;
 }
 .nav-bar .nav-title {
-    background: linear-gradient(to right, purple, #1c1c1e );
+    background: linear-gradient(to right, #00A3A3, #1c1c1e );
     padding: 20px;
     height: 15px;
     border-radius: 50px;
@@ -35,7 +35,7 @@ nav {
 
 
 .nav-bar .nav-log{
-    background: linear-gradient(to right, purple, #1c1c1e );
+    background: linear-gradient(to right, #00A3A3, #1c1c1e );
     padding: 20px;
     height: 15px;
     border-radius: 50px;

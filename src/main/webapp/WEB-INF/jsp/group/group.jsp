@@ -9,7 +9,7 @@
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%@ include file="/WEB-INF/jsp/include.jsp"%>
+
 
 <c:url var="view" value="/profiles" />
 
@@ -19,11 +19,11 @@
     <title>GroupList :: ${group.getName()}</title>
 </head>
 <body>
-<section class="hero is-fullheight">
-    <div class="hero-head">
+<section>
+    <div>
         <%@ include file="/WEB-INF/jsp/nav.jsp"%>
     </div>
-    <div class="hero-body">
+    <div >
         <div class="container">
             <div class="card">
                 <div class="card-content">
