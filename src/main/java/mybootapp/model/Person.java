@@ -122,4 +122,6 @@ public class Person implements Serializable {
     public void setCurrentGroup(Group currentGroup) {
         this.currentGroup = currentGroup;
     }
+
+
 }

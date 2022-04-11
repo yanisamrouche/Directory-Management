@@ -60,11 +60,11 @@ public class DataGenerator {
             groups.add(g);
             dao.addGroup(g);
         }
-        int rand = new Random().nextInt(groups.size());
         for(int i=0; i < nbrPersons; i++){
             Person person = new Person();
             String name = names.get(i);
             String firstName = firstNames.get(i);
+            int rand = new Random().nextInt(groups.size());
             Group g = groups.get(rand);
 
             person.setFirstname(firstName);
