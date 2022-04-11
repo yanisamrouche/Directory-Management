@@ -7,6 +7,8 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
 <!DOCTYPE html>
 
 
@@ -15,7 +17,7 @@
 
 <html>
 <head>
-    <%--%@ include file="/WEB-INF/jsp/header.jsp"%--%>
+    <%@ include file="/WEB-INF/jsp/header.jsp"%>
     <title>GroupList :: ${group.getName()}</title>
 </head>
 <body>
@@ -31,9 +33,19 @@
                     <hr>
                     <p class="subtitle">Adhérents</p>
                     <div class="list is-hoverable">
-                        <c:forEach items="${group.getPersons()}" var="person">
-                            <a class="list-item" href="${view}?id=${person.getId()}"><c:out value="${person.getName()}" /> <c:out value="${person.getFirstname()}" /></a>
-                        </c:forEach>
+                        <table style="border: 1px solid;">
+                            <tr style="border: 1px solid;">
+                                <th>Nom</th> <th>Prénom</th> <th> Profile </th>
+                            </tr>
+                            <c:forEach items="${group.getPersons()}" var="person">
+
+                                <tr>
+                                    <td> <c:out value="${person.getName()}" /> </td>
+                                    <td> <c:out value="${person.getFirstname()}" /> </td>
+                                    <td> <a href="${view}?id=${person.getId()}"> <i class="fas fa-eye"></i> </a></td>
+                                </tr>
+                            </c:forEach>
+                        </table>
                     </div>
                 </div>
             </div>
