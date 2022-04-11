@@ -18,68 +18,67 @@
 <html>
 <head>
     <%@ include file="/WEB-INF/jsp/header.jsp"%>
-    <title>Boo'Book :: Edit Profile</title>
+    <title>Edit Profile</title>
 </head>
 <body>
-<section class="hero is-fullheight">
-    <div class="hero-head">
+    <div>
         <%@ include file="/WEB-INF/jsp/nav.jsp"%>
     </div>
-    <div class="hero-body">
-        <div class="container">
-            <div class="card">
-                <div class="card-content">
+    <div>
+        <div>
+            <div>
+                <div>
 
                     <form:form method="POST" modelAttribute="person">
 
                         <form:errors path="*" cssClass="subtitle has-text-danger" element="p" />
 
-                        <div class="field">
-                            <label class="label">Prenom</label>
+                        <div>
+                            <label>Prenom</label>
                             <form:input class="control" path="firstname" />
                             <form:errors path="firstname" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Nom</label>
+                        <div>
+                            <label>Nom</label>
                             <form:input class="control" path="name" />
                             <form:errors path="name" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Groupe</label>
+                        <div>
+                            <label>Groupe</label>
                             <form:select path="group.id" multiple="false" class="form-control">
                                 <form:options items="${groupFormList}"/>
                             </form:select>
                             <form:errors path="group" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Date de naissance</label>
+                        <div>
+                            <label>Date de naissance</label>
                             <form:input type="date" class="control" path="birthdate"/>
                             <form:errors path="birthdate" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Email</label>
+                        <div>
+                            <label>Email</label>
                             <form:input class="control" path="email" />
                             <form:errors path="email" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Site web</label>
+                        <div>
+                            <label>Site web</label>
                             <form:input class="control" path="website" />
                             <form:errors path="website" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <label class="label">Mot de passe</label>
+                        <div>
+                            <label>Mot de passe</label>
                             <form:input class="control" path="password" />
                             <form:errors path="password" cssClass="help is-danger" element="p" />
                         </div>
 
-                        <div class="field">
-                            <div class="control">
+                        <div>
+                            <div>
                                 <button type="submit" class="button is-link">Sauvegarder</button>
                             </div>
                         </div>
@@ -90,6 +89,5 @@
             </div>
         </div>
     </div>
-</section>
 </body>
 </html>
