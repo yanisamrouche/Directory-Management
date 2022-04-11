@@ -10,7 +10,7 @@
 .card{
 
     color: white;
-    background: linear-gradient(to bottom, gray, #1c1c1e );
+    background: linear-gradient(to bottom, darkblue, #1c1c1e );
     border-radius: 20px;
     width: 400px;
     height: 250px;
