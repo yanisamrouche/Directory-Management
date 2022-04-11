@@ -7,13 +7,13 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
 <%@ taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
-<!DOCTYPE html>
-
-
-
 <c:url var="view" value="/profiles" />
+<c:url var="home" value="/" />
+<c:url var="login" value="/log" />
 
 <html>
 <head>
@@ -21,14 +21,48 @@
     <title>GroupList :: ${group.getName()}</title>
 </head>
 <body>
-<section>
     <div>
-        <%--%@ include file="/WEB-INF/jsp/nav.jsp"%--%>
+<%--        <%@ include file="/WEB-INF/jsp/nav.jsp"%>--%>
+    <nav class="nav-bar">
+        <div class="nav-title">
+            <a  href="${home }">
+                AMU-Annuaire
+            </a>
+        </div>
+
+
+        <div class="nav-search" >
+            <form action="${search}" id="searchForm" >
+                <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
+                <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search">
+            </form>
+        </div>
+
+        <div class="nav-log">
+
+            <c:choose>
+                <c:when test="${sessionScope.user.getPerson() == null}">
+                    <a class="button is-light" href="${login}">
+                        <span>Connexion</span>
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="${profiles}?id=${sessionScope.user.getPerson().getId()}">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span>Mon profil</span>
+                    </a>
+                    <a href="${login}/out">
+                        <span>Deconnexion</span>
+                    </a>
+                </c:otherwise>
+            </c:choose>
+        </div>
+    </nav>
     </div>
     <div >
-        <div class="container">
-            <div class="card">
-                <div class="card-content">
+        <div>
+            <div>
+                <div>
                     <p class="title"><c:out value="${group.getName()}" /></p>
                     <hr>
                     <p class="subtitle">Adhérents</p>
@@ -51,6 +85,5 @@
             </div>
         </div>
     </div>
-</section>
 </body>
 </html>

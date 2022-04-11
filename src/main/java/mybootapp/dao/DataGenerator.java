@@ -55,7 +55,7 @@ public class DataGenerator {
         Group group = new Group("sans groupe");
         groups.add(group);
         dao.addGroup(group);
-        for(int i=1; i <= nbrGroups; i++){
+        for(int i=0; i <nbrGroups; i++){
             Group g = new Group("Groupe n°"+i);
             groups.add(g);
             dao.addGroup(g);

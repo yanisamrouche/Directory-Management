@@ -9,7 +9,6 @@ a{
 }
 .main{
     display: flex;
-    cursor: pointer;
     margin-top: 20px;
     padding-bottom: 20px ;
     justify-content: center;
@@ -25,6 +24,7 @@ a{
     margin-right: 30px;
 }
 .main .personnes a span.prs{
+    cursor: pointer;
     color: white;
     font-size: 50px;
     display: table;
@@ -39,6 +39,7 @@ a{
     margin-right: 30px;
 }
 .main .groupes a span.grp{
+    cursor: pointer;
     color: white;
     font-size: 50px;
     display: table;
