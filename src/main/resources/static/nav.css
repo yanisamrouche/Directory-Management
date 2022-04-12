@@ -42,6 +42,20 @@ nav {
     color: black;
 }
 
+.nav-bar .nav-log .profile{
+    background: linear-gradient(to right, #00A3A3, #1c1c1e );
+    padding: 20px;
+    height: 15px;
+    border-radius: 50px;
+    color: black;
+}
+.nav-bar .nav-log .deconnexion{
+    background: linear-gradient(to right, #00A3A3, #1c1c1e );
+    padding: 20px;
+    height: 15px;
+    border-radius: 50px;
+    color: black;
+}
 nav a{
     color: white;
 }

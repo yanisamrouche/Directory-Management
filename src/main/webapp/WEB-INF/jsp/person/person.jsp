@@ -7,8 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%--<c:url var="edit" value="/person/edit" />--%>
-
 <html>
 <head>
     <%@ include file="/WEB-INF/jsp/header.jsp"%>
@@ -40,7 +38,7 @@
         </p>
 
         <c:if test="${sessionScope.user.getPerson().getId().equals(person.getId())}">
-            <a href="${edit }?id=${sessionScope.user.getPerson().getId()}">
+            <a href="profiles/edit?id=${sessionScope.user.getPerson().getId()}">
                 <span><i class="fas fa-edit"></i></span>
                 <span>Editer le profile</span>
             </a>

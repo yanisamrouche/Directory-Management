@@ -14,6 +14,8 @@
 <c:url var="view" value="/profiles" />
 <c:url var="home" value="/" />
 <c:url var="login" value="/log" />
+<c:url var="search" value="/result/find" />
+
 
 <html>
 <head>
@@ -34,7 +36,7 @@
         <div class="nav-search" >
             <form action="${search}" id="searchForm" >
                 <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
-                <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search">
+                <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search" name="name">
             </form>
         </div>
 

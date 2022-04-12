@@ -2,7 +2,7 @@
 
 <c:url var="persons" value="/profiles" />
 <c:url var="groups" value="/groups" />
-<c:url var="search" value="/person/find" />
+<c:url var="search" value="/result/find" />
 
 
 	<div>

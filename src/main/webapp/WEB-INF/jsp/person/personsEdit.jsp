@@ -14,6 +14,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <c:url var="view" value="/groups" />
+<c:url var="search" value="/result/find" />
+<c:url var="home" value="/" />
+<c:url var="profiles" value="/profiles" />
+<c:url var="login" value="/log" />
 
 <html>
 <head>
@@ -22,7 +26,42 @@
 </head>
 <body>
     <div>
-        <%@ include file="/WEB-INF/jsp/nav.jsp"%>
+<%--        <%@ include file="/WEB-INF/jsp/nav.jsp"%>--%>
+    <nav class="nav-bar">
+        <div class="nav-title">
+            <a  href="${home }">
+                AMU-Annuaire
+            </a>
+        </div>
+
+
+        <div class="nav-search" >
+            <form action="${search}" id="searchForm" >
+                <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
+                <input  class="searchInput" type="search" placeholder="Rechercher..." aria-label="Search" name="name">
+            </form>
+        </div>
+
+        <div class="nav-log">
+
+            <c:choose>
+                <c:when test="${sessionScope.user.getPerson() == null}">
+                    <a class="button is-light" href="${login}">
+                        <span>Connexion</span>
+                    </a>
+                </c:when>
+                <c:otherwise>
+                    <a href="${profiles}?id=${sessionScope.user.getPerson().getId()}">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span>Mon profil</span>
+                    </a>
+                    <a href="${login}/out">
+                        <span>Deconnexion</span>
+                    </a>
+                </c:otherwise>
+            </c:choose>
+        </div>
+    </nav>
     </div>
     <div>
         <div>
@@ -47,10 +86,10 @@
 
                         <div>
                             <label>Groupe</label>
-                            <form:select path="group.id" multiple="false" class="form-control">
+                            <form:select path="currentGroup.id" multiple="false" class="form-control">
                                 <form:options items="${groupFormList}"/>
                             </form:select>
-                            <form:errors path="group" cssClass="help is-danger" element="p" />
+                            <form:errors path="currentGroup" cssClass="help is-danger" element="p" />
                         </div>
 
                         <div>
