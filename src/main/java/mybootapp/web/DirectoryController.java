@@ -74,11 +74,14 @@ public class DirectoryController {
         }
     }
 
-    @RequestMapping("profiles/find")
-    public ModelAndView showProfilesFind(HttpSession session, @RequestParam("name")String name) {
+    @RequestMapping(value = "profiles/edit", method = RequestMethod.GET)
+    public ModelAndView editProfile(HttpSession session, @RequestParam int id) {
         User user = getUser(session);
-        final var result = manager.findPersonsByName(user, name);
-        return new ModelAndView("resultSearch", "persons", result);
+
+        if(!user.getIsLogged()) return new ModelAndView("index");
+        if(user.getPerson() == null) return new ModelAndView("index");
+
+        return new ModelAndView("person/personsEdit", "person", user.getPerson());
     }
 
     @RequestMapping(value = "profiles/edit", method = RequestMethod.POST)
@@ -173,6 +176,10 @@ public class DirectoryController {
             user.setConnectionError(true);
             return new ModelAndView("log/login");
         }
+    }
+    @RequestMapping(value="/log/forgetpassword",  method = RequestMethod.GET)
+    public ModelAndView fogetPassword(){
+        return new ModelAndView("log/forgetPassword");
     }
 
     @RequestMapping("/log/out")

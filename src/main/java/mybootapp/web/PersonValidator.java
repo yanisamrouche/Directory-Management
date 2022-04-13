@@ -33,8 +33,8 @@ public class PersonValidator implements Validator {
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "birthdate",
                 "person.birthdate");
 
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "group",
-                "person.group");
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "currentGroup",
+                "person.currentGroup");
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password",
                 "person.password");
