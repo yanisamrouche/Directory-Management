@@ -1,0 +1,44 @@
+
+.login-form{
+    background-color: #fff;
+    width: 45%;
+    height: 100%;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px 0 0;
+    border-radius: 50px;
+    box-shadow: 0 30px 50px 0 rgb(0 0 0 / 20%);
+}
+
+.login-form input{
+    padding: 10px;
+    margin: 10px;
+    width: 85%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 6px;
+}
+
+.btn-log{
+    padding: 25px;
+    margin: 25px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff5f6d, #1c1c1e );
+    height: 35px;
+    border: 1px solid #1c1c1e;
+    border-radius: 40px;
+    color: white;
+}
+
+.btn-log:hover{
+    animation: pulsate 1s ease-in-out;
+    background: #eb3349;
+    transform: translateY(-7px);
+    box-shadow: 0px 10px 25px #1c1c1e;
+}
+
+@keyframes pulsate {
+    0%{
+        box-shadow: 0 0 25px #eb3349, 0 0 50px #000;
+    }
+}

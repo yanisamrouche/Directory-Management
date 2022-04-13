@@ -8,6 +8,11 @@
 <c:url var="personPage" value="/personPage.css" />
 <c:url var="personsListPage" value="/personsListPage.css" />
 <c:url var="groupListPage" value="/groupListPage.css" />
+<c:url var="login" value="/login.css" />
+<c:url var="personsEditPage" value="/personsEditPage.css" />
+<c:url var="resultSearchPage" value="/resultSearchPage.css" />
+
+
 
 
 
@@ -20,6 +25,14 @@
 		<link rel="stylesheet" href="${personPage}">
 		<link rel="stylesheet" href="${personsListPage}">
 			<link rel="stylesheet" href="${groupListPage}">
+			<link rel="stylesheet" href="${login}">
+			<link rel="stylesheet" href="${personsEditPage}">
+			<link rel="stylesheet" href="${resultSearchPage}">
+
+
+
+
+
 
 
 

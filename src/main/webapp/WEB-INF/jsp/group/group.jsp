@@ -13,7 +13,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"  %>
 <c:url var="view" value="/profiles" />
 <c:url var="home" value="/" />
-<c:url var="login" value="/log" />
+<c:url var="log" value="/log" />
 <c:url var="search" value="/result/find" />
 
 
@@ -32,7 +32,6 @@
             </a>
         </div>
 
-
         <div class="nav-search" >
             <form action="${search}" id="searchForm" >
                 <button class="btnSearchInput" type="button"><i class="fas fa-search"></i></button>
@@ -44,18 +43,24 @@
 
             <c:choose>
                 <c:when test="${sessionScope.user.getPerson() == null}">
-                    <a class="button is-light" href="${login}">
-                        <span>Connexion</span>
-                    </a>
+                    <div class="connexion">
+                        <a class="button is-light" href="${log}">
+                            <span>Connexion</span>
+                        </a>
+                    </div>
                 </c:when>
                 <c:otherwise>
-                    <a href="${profiles}?id=${sessionScope.user.getPerson().getId()}">
-                        <span class="icon"><i class="fas fa-user"></i></span>
-                        <span>Mon profil</span>
-                    </a>
-                    <a href="${login}/out">
-                        <span>Deconnexion</span>
-                    </a>
+                    <div class="profile">
+                        <a href="${profiles}?id=${sessionScope.user.getPerson().getId()}">
+                            <span class="icon"><i class="fas fa-user"></i></span>
+                            <span>Mon profil</span>
+                        </a>
+                    </div>
+                    <div class="deconnexion">
+                        <a href="${login}/out">
+                            <span>Deconnexion</span>
+                        </a>
+                    </div>
                 </c:otherwise>
             </c:choose>
         </div>

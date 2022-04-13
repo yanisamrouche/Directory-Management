@@ -28,27 +28,31 @@
         <div>
 
             <h1>
-                <c:out value="${persons.size()+groupList.size()}" /> Resultats
+                <c:out value="${persons.size()+groupList.size()}" /> Resultat(s)
             </h1>
 
-            <c:forEach items="${persons}" var="person">
-                <div class="card">
-                    <a href="${viewP}?id=${person.getId()}">
-                        <div class="card-content">
-                            <p class="title is-5"><c:out value="${person.getName()}" /> <c:out value="${person.getFirstname()}" /> | <c:out value="${person.getCurrentGroup().getName()}" /></p>
-                        </div>
-                    </a>
-                </div>
-            </c:forEach>
-            <c:forEach items="${groupList}" var="group">
-                <div class="card">
-                    <a href="${viewG}?id=${group.getId()}">
-                        <div class="card-content">
-                            <p class="title is-5"><c:out value="${group.getName()}" /></p>
-                        </div>
-                    </a>
-                </div>
-            </c:forEach>
+
+
+                <table>
+                    <c:forEach items="${persons}" var="person">
+
+                        <tr>
+                            <td> <c:out value="${person.getName()}" /> </td>
+                            <td> <c:out value="${person.getFirstname()}" /> </td>
+                            <td> <c:out value="${person.getCurrentGroup().getName()}" /> </td>
+                            <td> <a href="${viewP}?id=${person.getId()}"> <i class="fas fa-eye"></i> </a></td>
+                        </tr>
+                    </c:forEach>
+                </table>
+                <table>
+                    <c:forEach items="${groupList}" var="group">
+                        <tr>
+                            <td> <c:out value="${group.getName()}" /> </td>
+                            <td> <a href="${viewG}?id=${group.getId()}"> <i class="fas fa-eye"></i> </a></td>
+                        </tr>
+                    </c:forEach>
+                </table>
+
 
         </div>
     </div>

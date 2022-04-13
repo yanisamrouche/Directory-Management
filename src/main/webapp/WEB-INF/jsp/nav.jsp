@@ -9,7 +9,7 @@
 
 <c:url var="home" value="/" />
 <c:url var="profiles" value="/profiles" />
-<c:url var="login" value="/log" />
+<c:url var="log" value="/log" />
 <c:url var="search" value="/result/find" />
 
 
@@ -35,7 +35,7 @@
                 <c:choose>
                         <c:when test="${sessionScope.user.getPerson() == null}">
                             <div class="connexion">
-                            <a class="button is-light" href="${login}">
+                            <a class="button is-light" href="${log}">
                                 <span>Connexion</span>
                             </a>
                             </div>

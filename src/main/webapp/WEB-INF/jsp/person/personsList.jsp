@@ -29,7 +29,7 @@
         <h1>Personnes:</h1>
         <table style="border: 1px solid;">
             <tr style="border: 1px solid;">
-                <th>Nom</th> <th>Prénom</th> <th>Groupe</th> <th> Lien </th>
+                <th>Nom</th> <th>Prénom</th> <th>Groupe</th> <th> Profile </th>
             </tr>
         <c:forEach items="${persons}" var="person">
 

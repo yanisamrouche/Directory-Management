@@ -25,10 +25,10 @@
     </div>
     <div>
         <div>
-            <h1>Connexion</h1>
             <div>
                 <div>
-                    <form action="${log}" method="POST">
+                    <form class="login-form" action="${log}" method="POST">
+                        <h1>Connexion</h1>
                         <c:if test ="${sessionScope.user.getConnectionError() == true}">
                             <p>Email ou mot de passe invalide</p>
                         </c:if>
@@ -49,11 +49,12 @@
                         </div>
                         <div>
                             <p>
-                                <button>Se connecter</button>
+                                <button class="btn-log">Se connecter</button>
                             </p>
                         </div>
+                        <a href="${forget }" style="color: darkblue">mot de passe oublié ?</a>
+
                     </form>
-                    <a class="button is-text is-small" href="${forget }">mot de passe oublié ?</a>
                     <hr>
                 </div>
             </div>
