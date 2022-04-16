@@ -60,7 +60,7 @@
                         </a>
                     </div>
                     <div class="deconnexion">
-                        <a href="${login}/out">
+                        <a href="${log}/out">
                             <span>Deconnexion</span>
                         </a>
                     </div>

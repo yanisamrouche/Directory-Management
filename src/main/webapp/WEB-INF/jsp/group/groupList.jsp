@@ -16,6 +16,8 @@
 <c:url var="home" value="/" />
 <c:url var="search" value="/result/find" />
 <c:url var="log" value="/log" />
+<c:url var="profiles" value="/profiles" />
+
 
 <%--c:url var="findGroups" value="/groups/find" /--%>
 
@@ -60,7 +62,7 @@
             </a>
           </div>
           <div class="deconnexion">
-            <a href="${login}/out">
+            <a href="${log}/out">
               <span>Deconnexion</span>
             </a>
           </div>

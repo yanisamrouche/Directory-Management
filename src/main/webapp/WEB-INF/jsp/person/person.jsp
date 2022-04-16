@@ -38,10 +38,12 @@
         </p>
 
         <c:if test="${sessionScope.user.getPerson().getId().equals(person.getId())}">
-            <a href="profiles/edit?id=${sessionScope.user.getPerson().getId()}">
-                <span><i class="fas fa-edit"></i></span>
-                <span>Editer le profile</span>
-            </a>
+
+                <a class="edit-link" href="profiles/edit?id=${sessionScope.user.getPerson().getId()}">
+                    <span><i class="fas fa-edit"></i></span>
+                    <span>Editer le profile</span>
+                </a>
+
         </c:if>
         </div>
     </div>

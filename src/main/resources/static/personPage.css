@@ -27,3 +27,12 @@
     display: table;
     margin: 0 auto;
 }
+
+.card .edit-link{
+    background: linear-gradient(to right, #ff5f6d, white );
+    height: 15px;
+    width: 40%;
+    border-radius: 12px;
+    display: table;
+    margin: 0 auto;
+}
