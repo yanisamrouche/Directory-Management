@@ -1,6 +1,6 @@
 table{
     border: 1px solid;
-    background: linear-gradient(to bottom, darkred, #1c1c1e );
+    background: linear-gradient(to bottom, #ff5f6d, #1c1c1e );
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -10,7 +10,7 @@ table{
 
 }
 th{
-    background: linear-gradient(to bottom, darkred, #1c1c1e );
+    background: linear-gradient(to bottom, #ff5f6d, #1c1c1e );
 
 }
 table,th, td {

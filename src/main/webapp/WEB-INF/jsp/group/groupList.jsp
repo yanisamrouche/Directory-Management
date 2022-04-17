@@ -75,7 +75,7 @@
   <div >
     <div>
       <h1 class="title">Groupes</h1>
-
+<%--      <h3 class="subtitle">Nombre de groupes : ${groupList.size()}</h3>--%>
       <table style="border: 1px solid;">
         <tr style="border: 1px solid;">
           <th>Nom</th> <th> Lien </th>
