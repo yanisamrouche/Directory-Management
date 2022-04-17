@@ -26,7 +26,7 @@
     </div>
 
     <div>
-        <h1>Personnes:</h1>
+        <h1 class="title">Personnes:</h1>
         <table style="border: 1px solid;">
             <tr style="border: 1px solid;">
                 <th>Nom</th> <th>Prénom</th> <th>Groupe</th> <th> Profile </th>
@@ -46,15 +46,15 @@
         <nav class="pagination is-centered" role="navigation" aria-label="pagination">
             <c:choose>
                 <c:when test="${param.page != null && param.page != 0}">
-                    <a href="${view}?page=${param.page == null || param.page == 0 ? 0 : param.page-1}" class="pagination-previous">Précédent</a>
+                    <a href="${view}?page=${param.page == null || param.page == 0 ? 0 : param.page-1}" class="pagination-previous"><i id="left-arrow" class="fas fa-arrow-left"></i></a>
                 </c:when>
 
                 <c:otherwise>
-                    <a class="pagination-previous" disabled>Précédent</a>
+                    <a class="pagination-previous" disabled><i id="left-arr" class="fas fa-arrow-left"></i></a>
                 </c:otherwise>
             </c:choose>
 
-            <a href="${view}?page=${param.page == null ? 1 : param.page+1}" class="pagination-next">Suivant</a>
+            <a href="${view}?page=${param.page == null ? 1 : param.page+1}" class="pagination-next"><i id="right-arrow" class="fas fa-arrow-right"></i></a>
         </nav>
     </div>
 

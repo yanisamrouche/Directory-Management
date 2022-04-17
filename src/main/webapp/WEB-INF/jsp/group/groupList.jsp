@@ -91,8 +91,8 @@
 
       <hr>
       <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-        <a href="${view}?page=${param.page == null || param.page == 0 ? 0 : param.page-1}" class="pagination-previous"><i class="fas fa-arrow-left"></i></a>
-        <a href="${view}?page=${param.page == null ? 1 : param.page+1}" class="pagination-next"><i class="fas fa-arrow-right"></i></a>
+        <a href="${view}?page=${param.page == null || param.page == 0 ? 0 : param.page-1}" class="pagination-previous"><i id="left-arrow" class="fas fa-arrow-left"></i></a>
+        <a href="${view}?page=${param.page == null ? 1 : param.page+1}" class="pagination-next"><i id="right-arrow" class="fas fa-arrow-right"></i></a>
       </nav>
     </div>
   </div>

@@ -36,4 +36,10 @@ nav a{
 
 
 }
+#left-arrow,#right-arrow,#left-arr{
+    font-size: xx-large;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50px;
+}
 
