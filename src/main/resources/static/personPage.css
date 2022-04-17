@@ -29,7 +29,7 @@
 }
 
 .card .edit-link{
-    background: linear-gradient(to right, #ff5f6d, white );
+    background: linear-gradient(to right, #ff5f6d, #1c1c1e );
     height: 15px;
     width: 40%;
     border-radius: 12px;

@@ -26,7 +26,8 @@
     </div>
 
     <div>
-        <h1 class="title">Personnes:</h1>
+        <h1 class="title">Personnes</h1>
+<%--        <h3 class="subtitle">Nombre de personnes : ${persons.size()}</h3>--%>
         <table style="border: 1px solid;">
             <tr style="border: 1px solid;">
                 <th>Nom</th> <th>Prénom</th> <th>Groupe</th> <th> Profile </th>
